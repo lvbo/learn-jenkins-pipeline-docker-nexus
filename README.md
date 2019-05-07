@@ -1,0 +1,1 @@
+做pipeline中构建并发布到nexus的实验使用的工程
