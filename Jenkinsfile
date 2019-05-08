@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 withDockerRegistry([
-                    credentialsId: "${regsitryCredential}",
+                    credentialsId: "${registryCredential}",
                     url: "${registry}" ]) {
                         sh "docker build . -t ${registry}/hello:v2"
                         sh "docker push ${registry}/hello:v2"
