@@ -24,14 +24,13 @@ pipeline {
             // mail body: 'failure body', from: 'lvbo09@163.com', subject: 'build status', to: 'lvbo09@163.com'
 
             emailext body:
-                """<p>EXECUTED: Job <b>\'${env.JOB_NAME}:${env.BUILD_NUMBER}\'
-                </b></p><p>View console output at "<a href="${env.BUILD_URL}">
-                ${env.JOB_NAME}:${env.BUILD_NUMBER}</a>"</p>
-                <p><i>(Build log is attached.)</i></p>""",
+                """<p>EXECUTED: Job <b>'${env.JOB_NAME}:${env.BUILD_NUMBER}'</b></p>\
+                   <p>View console output at <a href="${env.BUILD_URL}>${env.JOB_NAME}:${env.BUILD_NUMBER}</a></p>\
+                   <p><i>(Build log is attached.)</i></p>""",
                 compressLog: true,
                 attachLog: true,
-                recipientProviders: [culprits(), developers(), requestor(), brokdenBuildSuspects()],
-                replyTo: 'do-not-reply@company.com',
+                recipientProviders: [culprits(), developers(), requestor(), brokenBuildSuspects()],
+                replyTo: 'lvbo09@163.com',
                 subject: "Status: ${currentBuild.result?:'SUCCESS'} - Job \'${env.JOB_NAME}:${env.BUILD_NUMBER}\'",
                 to: "lvbo09@163.com"
         }
