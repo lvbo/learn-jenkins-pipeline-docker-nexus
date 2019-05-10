@@ -18,4 +18,11 @@ pipeline {
             }
         }
     }
+
+    post {
+        failure {
+            mail body: 'failure body', from: 'lvbo09@163.com', subject: 'build status', to: 'lvbo09@163.com'
+        }
+    }
+
 }
