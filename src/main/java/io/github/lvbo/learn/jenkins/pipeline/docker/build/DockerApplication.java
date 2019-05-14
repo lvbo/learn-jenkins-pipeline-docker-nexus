@@ -1,4 +1,4 @@
-package io.github.lvbo.learn.jenkins.pipeline.docker.nexus;
+package io.github.lvbo.learn.jenkins.pipeline.docker.build;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

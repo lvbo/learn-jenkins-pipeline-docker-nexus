@@ -1,4 +1,4 @@
-package io.github.lvbo.learn.jenkins.pipeline.docker.nexus;
+package io.github.lvbo.learn.jenkins.pipeline.docker.build;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
