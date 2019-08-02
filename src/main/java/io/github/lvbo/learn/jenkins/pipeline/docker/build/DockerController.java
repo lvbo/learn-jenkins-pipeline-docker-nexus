@@ -1,4 +1,4 @@
-package io.github.lvbo.learn.jenkins.pipeline.docker.build;
+package io.github.lvbo.learn.spring.boot.swagger.learn.jenkins.pipeline.docker.build;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
